@@ -2,37 +2,38 @@
 
 /* FUNCTIONS */
 /* Function Definition - Add Numbers */
-function add(number1, number2) {
-    return number1 + number2;
+function addNumbers(add1, add2) {
+    return add1 + add2;
 }
 //Function declaration
 function addNumbers() {
-    let addNumber1 = Number(document.querySelector('number1').value);
-    let addNumber2 = Number(document.querySelector('number2').value);
-    document.querySelector('sum').value = add(addNumber1, addNumber2);
+    const add1 = parseFloat(document.getElementById('add1').value);
+    const add2 = parseFloat(document.getElementById('add2').value);
+    const sum = add(add1, add2);
+    document.getElementById('sum').innerText = sum;
 }
-document.querySelector('addNumbers').addEventListener('click', addNumbers);
+document.getElementById('addNumbers').addEventListener('click', addNumbers);
 
 /* Function Expression - Subtract Numbers */
-const subtraction = function(number1, number2) {
-    return number1 - number2;
+const subtractNumber = function(subtract1, subtract2) {
+    return subtract1 - subtract2;
 };
 
 const subtractNumbers = function() {
-    let subtract1 = Number(document.querySelector('number1').value);
-    let subtract2 = Number(document.querySelector('number2').value);
-    document.querySelector('difference').value = subtract(subtract1, subtract2);
+    let subtract1 = Number(document.querySelector('subtract1').value);
+    let subtract2 = Number(document.querySelector('subtract2').value);
+    document.querySelector('difference').value = subtractNumbers(subtract1, subtract2);
 }
-document.querySelector('subtractNumbers').addEventListener('click', subtractNumbers);
+document.getElementById('subtractNumbers').addEventListener('click', subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
-const multiply = (factor1, factor2) => factor1 * factor2;
+const multiplyNumbers = (factor1, factor2) => factor1 * factor2;
 
 //arrow function
 const multiplyNumber = () => {
     const factor1 = Number(document.getElementById('factor1').value);
     const factor2 = Number(document.getElementById('factor2').value);
-    document.getElementById('prpoduct').value = multiply(factor1, factor2);
+    document.getElementById('product').value = multiply(factor1, factor2);
 };
 document.getElementById('multiplyNumbers').addEventListener('click', multiplyNumbers);
 

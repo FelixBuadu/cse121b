@@ -25,19 +25,22 @@ imageElement.setAttribute('alt', 'This is ${Felix Buadu}. He is a professor at B
 
 
 /* Step 5 - Array */
-let favfoods = ["Pizza", "Ice cream", "Tacos", "Sushi", "Pasta", "Jollof", "fruit salad"];
+let favoritefoods = ["Pizza", "Ice cream", "Tacos", "Sushi", "Pasta", "Jollof", "fruit salad"];
 
-foodElement.innerHTML = favfoods;
+
 let newfood = 'biscuits';
+let fruitfood = 'banana';
 
 //Remove the first element in the favorite foods.
-favfoods.shift(favfoods);
+favoritefoods.shift(fruitfood);
 
-favfoods.push(newfood);
-foodElement.innerHTML += favfoods;
+favoritefoods.push(newfood);
+foodElement.innerHTML += favoritefoods;
+foodElement.innerHTML += favoritefoods;
+
 
 //Remove the last element in the favorite foods
-favfoods.pop(favfoods);
+favoritefoods.pop(favoritefoods);
 
 
 
